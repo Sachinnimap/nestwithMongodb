@@ -23,8 +23,8 @@ export class JobService{
         }
     }
     async getJob(id:string){
-        try{
-        const response  = await this.jobModel.findById(id)
+        try{    //populate employer ( same thing repeating many places for solution we called populate method in JobSchema! )
+        const response  = await this.jobModel.findById(id)  //.populate("employer") //JobSchema -populate method
             return response;
         }catch(error){
                 if(error.name === 'NotFoundException'){
@@ -38,7 +38,7 @@ export class JobService{
             //   const isValidUser =  await this.userService.getUser(body.userId)
             // if(!isValidUser) throw new BadRequestException("Employer not found")
             // if(isValidUser.accountType != ACCOUNTTYPE.EMPLOYER) throw new ForbiddenException("Only employer can create job")
-            const response = await this.jobModel.create(body)
+            const response = await this.jobModel.create({employer:body.userId , ...body})
             return response; 
         }catch(error){
             if(error.name === "ValidationError")

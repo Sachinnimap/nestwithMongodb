@@ -8,6 +8,8 @@ import { DatabaseModule } from './mongoDB/database.module';
 import { UserModule } from './modules/users/users.module';
 import { JobModule } from './modules/jobs/jobs.module';
 import { mongooseModelsModule } from './modules/modelsModule/mongooseModelsModule';
+import { StudentModule } from './modules/students/students.module';
+import { EmployerModule } from './modules/employers/employers.module';
 
 @Module({
   imports: [

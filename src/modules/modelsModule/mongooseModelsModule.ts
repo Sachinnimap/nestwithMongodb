@@ -1,11 +1,16 @@
 import { Global, Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import mongoose from "mongoose";
+import { Employer_MODEL_NAME, EmployerSchema } from "src/schemas/employer";
 import { jobModelName, JobSchema } from "src/schemas/job";
+import { STUDENT_MODEL_NAME, StudentSchema } from "src/schemas/student";
 import { UserModelName, UserSchema } from "src/schemas/user";
 
 const allModels = [
-    {name : UserModelName , schema: UserSchema},
+    {name : UserModelName , schema: UserSchema ,descriminators:[
+        {name : Employer_MODEL_NAME, schema : EmployerSchema},
+        {name : STUDENT_MODEL_NAME, schema : StudentSchema}
+    ]},
     {name: jobModelName , schema : JobSchema}
 ]
 
