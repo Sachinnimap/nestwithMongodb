@@ -18,7 +18,7 @@ const allModels = [
 //also need to import this module in app module then only will considered as global!
 @Global()
 @Module({
-    imports : [MongooseModule.forFeature(allModels)],
+    imports : [MongooseModule.forFeature(allModels , "APP")], //all the collection will store in "APP" database! 
     controllers :[],
     providers : [],
     exports : [MongooseModule]

@@ -164,7 +164,7 @@ export interface IUserModel extends  Model<UserDocument,IUserQueryHelpers>{
 }
 
 //can discriminator create like this or directly inside @schema decoratore
-// schema.set("discriminatorKey", 'userKing') 
+// schema.set("discriminatorKey", 'userKind') 
 
 export type UserDocument = User & Document;
 

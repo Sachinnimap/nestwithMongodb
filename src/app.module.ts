@@ -13,9 +13,9 @@ import { EmployerModule } from './modules/employers/employers.module';
 
 @Module({
   imports: [
-      mongooseModelsModule,
-    DatabaseModule,UserModule,JobModule
-    // ConfigModule.forRoot({isGlobal: true}),
+    mongooseModelsModule,
+    DatabaseModule,UserModule,JobModule,StudentModule,EmployerModule,
+    ConfigModule.forRoot({isGlobal: true}),
     // // MongooseModule.forRoot("mongodb://localhost:2701/nest_app_db")
     // MongooseModule.forRootAsync({
     //   // imports :[ConfigModule], //if isGlobal true then don't need to write here

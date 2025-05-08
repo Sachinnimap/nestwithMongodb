@@ -18,5 +18,5 @@ export class CreateStudentDTO extends CreateUserDTO{
 
     @IsBoolean()
     @IsOptional()
-    isUnderIntership:boolean = false
+    isUnderIntership?:boolean;
 }

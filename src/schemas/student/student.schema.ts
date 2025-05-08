@@ -19,4 +19,4 @@ export class Student{
 
 export const StudentSchema = SchemaFactory.createForClass(Student)
 export type StudentDocument = Student & Document;
-export const STUDENT_MODEL_NAME = Student.name; //to get name of Student!
+export const STUDENT_MODEL_NAME = Student.name; //to get name of Student!   
